@@ -31,6 +31,7 @@
     .logo img {
       height: 54px;
       vertical-align: middle;
+      margin-right: 10px;
       border-radius: 10px;
       box-shadow: 0 2px 6px #ffe5d7a0;
       background: #fff;
@@ -288,4 +289,272 @@
     }
     .contact-info-list a {
       color: #e96913;
-      text-decoration
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .contact-info-list a:hover {
+      color: #ff9a5a;
+    }
+    .sns-links {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+    }
+    .sns-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #fffbe9;
+      border: 1px solid #ffd39b;
+      border-radius: 18px;
+      padding: 7px 16px;
+      font-size: 1rem;
+      color: #e96913;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 4px #efd8b420;
+    }
+    .sns-links a:hover {
+      background: #ffecd0;
+      color: #ff9a5a;
+      box-shadow: 0 2px 8px #ffd39b50;
+    }
+    .contact-address {
+      margin-top: 22px;
+      padding: 16px 0 0 0;
+      color: #555;
+      font-size: 1rem;
+      border-top: 1px dashed #ffd39b;
+      text-align: left;
+    }
+    .contact-address strong {
+      display: block;
+      font-size: 1.06em;
+      margin-bottom: 2px;
+      color: #da6800;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.97rem;
+      margin: 40px 0 16px 0;
+    }
+    .footer-address {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.98rem;
+      color: #888;
+      line-height: 1.7;
+    }
+    @media (max-width: 760px) {
+      #top {
+        flex-direction: column;
+        padding: 22px 6px;
+        gap: 16px;
+      }
+      #service, #about, #contact {
+        padding: 22px 8px 18px 8px;
+      }
+      .service-blocks {
+        flex-direction: column;
+      }
+      .contact-area {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .contact-address {
+        font-size: 0.95rem;
+      }
+      .sns-links {
+        gap: 8px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="アクションエース　ロゴ.webp" alt="アクションエース ロゴ" style="height:54px;vertical-align:middle;margin-right:10px;">
+      アクションエース
+    </div>
+    <nav>
+      <a href="#top">トップ</a>
+      <a href="#service">サービス</a>
+      <a href="#about">会社情報</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <!-- 代表写真＆自己紹介 -->
+  <section id="top">
+    <div style="flex:1 1 220px;text-align:center;">
+      <img src="1.jpg" alt="代表 佐野一郎">
+      <div class="top-name">代表：佐野一郎</div>
+      <div class="top-title">生成AIクリエイター／講師</div>
+    </div>
+    <div class="top-message" style="flex:2 1 350px;">
+      <h1>
+        あなたの「はじめて」を応援します<br>
+        電子書籍＆AI活用で副業デビューをサポート
+      </h1>
+      <p>
+        電子書籍出版・AI活用・ChatGPTの基本まで、<br>
+        “やってみたい”あなたを親切・丁寧にサポートします。<br>
+        <span>パソコン初心者も大歓迎！</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- サービス紹介 -->
+  <section id="service">
+    <h2>サービス内容</h2>
+    <div class="service-blocks">
+      <div class="service-block">
+        <h3 style="color:#e97e1a;">電子書籍作成講座</h3>
+        <ul>
+          <li>Zoomで3回受講／AIを活用した原稿作成サポート</li>
+          <li>文章が苦手でも大丈夫！</li>
+          <li>表紙デザイン＆Amazon Kindle公開まで伴走</li>
+        </ul>
+      </div>
+      <div class="service-block">
+        <h3 style="color:#176cb8;">ChatGPT基本講座</h3>
+        <ul>
+          <li>初心者向け・「使ってみたい」を応援！</li>
+          <li>AIと対話しながら、ビジネスや副業に活用するコツを解説</li>
+        </ul>
+      </div>
+      <div class="service-block">
+        <h3 style="color:#c553c8;">オリジナルAIツール（GPT）作成・レンタル</h3>
+        <ul>
+          <li>あなた専用のAIツールを作成</li>
+          <li>販売＆サブスク型レンタルも対応</li>
+          <li>業務効率化・副業の強い味方に！</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 会社情報 -->
+  <section id="about">
+    <h2>会社情報</h2>
+    <dl>
+      <dt>会社名</dt>
+      <dd>アクションエース</dd>
+      <dt>業種</dt>
+      <dd>生成AI事業</dd>
+      <dt>企業理念</dt>
+      <dd>
+        アクションエースは、生成AI技術の可能性を最大限に引き出し、<br>
+        革新的なソリューションを通じて人々の創造力を支えます。<br>
+        「アイデアを形に、未来を現実に」をモットーに、<br>
+        個人や企業が抱える課題を解決し、より豊かな社会を実現するために貢献します。<br>
+        お客様一人ひとりのニーズに寄り添い、最適な成果を提供することで、<br>
+        信頼と価値を築き上げることを目指します。
+      </dd>
+      <dt>行動指針</dt>
+      <dd>
+        <ul style="margin:0 0 0 20px;padding:0;">
+          <li>創造性を尊重し、新しい価値を生み出す努力を惜しまない。</li>
+          <li>技術革新を推進し、AIの可能性を広げることで社会貢献を実現する。</li>
+          <li>お客様とのコミュニケーションを大切にし、最適なソリューションを提供する。</li>
+          <li>持続可能な成長と社会的責任を念頭に、事業活動を展開する。</li>
+        </ul>
+      </dd>
+      <dt>所在地</dt>
+      <dd>
+        秋葉原オフィス<br>
+        〒101-0024<br>
+        東京都千代田区神田和泉町1番地6-16ヤマトビル405
+      </dd>
+      <dt>電話番号</dt>
+      <dd><a href="tel:05017203938">050-1720-3938</a></dd>
+      <dt>メールアドレス</dt>
+      <dd><a href="mailto:action.ace2025@gmail.com">action.ace2025@gmail.com</a></dd>
+      <dt>公式LINE</dt>
+      <dd><a href="https://lin.ee/GuITPg1" target="_blank" rel="noopener">LINEで問い合わせ</a></dd>
+      <dt>YouTubeチャンネル</dt>
+      <dd><a href="https://www.youtube.com/@アクションエース" target="_blank" rel="noopener">https://www.youtube.com/@アクションエース</a></dd>
+      <dt>Facebookページ</dt>
+      <dd><a href="https://www.facebook.com/profile.php?id=61570933080787" target="_blank" rel="noopener">Facebookページ</a></dd>
+      <dt>コエテコカレッジ</dt>
+      <dd><a href="https://college.coeteco.jp/bundles/oPEOsA69" target="_blank" rel="noopener">コエテコカレッジ サブスクページ</a></dd>
+      <dt>ポートフォリオ</dt>
+      <dd><a href="https://action.edire.co/" target="_blank" rel="noopener">https://action.edire.co/</a></dd>
+      <dt>代表</dt>
+      <dd>
+        佐野一郎<br>
+        ・Webクリエイター<br>
+        ・生成AIクリエイター<br>
+        ・生成AIコンサルタント<br>
+        ・補助金AI診断士<br>
+        ・電子書籍コンサルタント<br>
+        ・GPTsクリエイター<br>
+        ・集客プランナー<br>
+        ・ビジネスプランナー
+      </dd>
+    </dl>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <div class="contact-area">
+      <div class="contact-profile">
+        <img src="1.jpg" alt="代表写真">
+        <div class="contact-name">佐野一郎</div>
+        <div class="contact-title">
+          生成AIクリエイター／講師
+        </div>
+      </div>
+      <form class="contact-form" name="contact" method="POST" data-netlify="true">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">メッセージ</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">送信</button>
+      </form>
+    </div>
+    <!-- お問い合わせ先一覧 -->
+    <dl class="contact-info-list">
+      <dt>電話番号：</dt>
+      <dd><a href="tel:05017203938">050-1720-3938</a></dd>
+      <dt>メール：</dt>
+      <dd><a href="mailto:action.ace2025@gmail.com">action.ace2025@gmail.com</a></dd>
+      <dt>公式LINE：</dt>
+      <dd><a href="https://lin.ee/GuITPg1" target="_blank" rel="noopener">LINEで問い合わせ</a></dd>
+    </dl>
+    <div class="sns-links">
+      <a href="https://www.youtube.com/@アクションエース" target="_blank" rel="noopener">YouTubeチャンネル</a>
+      <a href="https://www.facebook.com/profile.php?id=61570933080787" target="_blank" rel="noopener">Facebookページ</a>
+      <a href="https://college.coeteco.jp/bundles/oPEOsA69" target="_blank" rel="noopener">コエテコカレッジ</a>
+    </div>
+    <div class="contact-address">
+      <strong>秋葉原オフィス</strong>
+      〒101-0024<br>
+      東京都千代田区神田和泉町1番地6-16ヤマトビル405
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 アクションエース All Rights Reserved.
+    <span class="footer-address">
+      秋葉原オフィス 〒101-0024 東京都千代田区神田和泉町1番地6-16ヤマトビル405<br>
+      電話：050-1720-3938　メール：action.ace2025@gmail.com
+    </span>
+    <div class="sns-links">
+      <a href="https://www.youtube.com/@アクションエース" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.facebook.com/profile.php?id=61570933080787" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://college.coeteco.jp/bundles/oPEOsA69" target="_blank" rel="noopener">コエテコカレッジ</a>
+    </div>
+  </footer>
+</body>
+</html>
