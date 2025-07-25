@@ -26,15 +26,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 14px;
+      gap: 16px;
     }
     .logo img {
       height: 54px;
       vertical-align: middle;
-      margin-right: 10px;
       border-radius: 10px;
-      box-shadow: 0 2px 6px #ffe5d7a0;
       background: #fff;
+      box-shadow: 0 2px 6px #ffe5d7a0;
     }
     nav {
       margin: 16px 0 0 0;
@@ -54,7 +53,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 32px;
+      gap: 36px;
       max-width: 900px;
       margin: 40px auto 0 auto;
       padding: 32px 16px;
@@ -62,13 +61,14 @@
       border-radius: 16px;
       box-shadow: 0 2px 10px #ffe0b370;
     }
-    #top img {
-      width: 140px;
-      height: 140px;
+    #top .profile-photo {
+      width: 160px;
+      height: 160px;
       object-fit: cover;
-      border-radius: 70px;
+      border-radius: 80px;
       box-shadow: 0 2px 8px #e0bb94a0;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      display: block;
     }
     #top .top-name {
       font-weight: bold;
@@ -97,7 +97,7 @@
     }
     /* サービス */
     #service {
-      max-width: 900px;
+      max-width: 950px;
       margin: 40px auto 0 auto;
       background: #fff;
       border-radius: 16px;
@@ -113,26 +113,48 @@
     .service-blocks {
       display: flex;
       flex-wrap: wrap;
-      gap: 22px;
+      gap: 24px;
       justify-content: space-between;
     }
     .service-block {
-      flex: 1 1 280px;
+      flex: 1 1 290px;
       min-width: 250px;
       background: #fffbe7;
-      padding: 18px 14px 14px 18px;
-      border-radius: 12px;
+      padding: 18px 14px 14px 14px;
+      border-radius: 14px;
       box-shadow: 0 2px 8px #ffe3b330;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+    }
+    .service-block:hover {
+      box-shadow: 0 4px 18px #ffecb5c0;
+    }
+    .service-block img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px #efd8b450;
+      margin-bottom: 14px;
+      background: #fff;
+      object-fit: cover;
     }
     .service-block h3 {
-      margin: 0 0 6px 0;
+      margin: 0 0 8px 0;
       font-size: 1.18rem;
+      color: #e97e1a;
+      text-align: center;
     }
+    .service-block:nth-child(2) h3 { color: #176cb8; }
+    .service-block:nth-child(3) h3 { color: #c553c8; }
     .service-block ul {
-      margin: 0 0 0 15px;
+      margin: 0 0 0 16px;
       padding: 0;
       color: #333;
       font-size: 1rem;
+      text-align: left;
+      line-height: 1.8;
     }
     /* 会社情報 */
     #about {
@@ -350,6 +372,16 @@
       color: #888;
       line-height: 1.7;
     }
+    @media (max-width: 960px) {
+      .service-blocks {
+        flex-direction: column;
+        gap: 32px;
+      }
+      .service-block {
+        max-width: 390px;
+        margin: 0 auto;
+      }
+    }
     @media (max-width: 760px) {
       #top {
         flex-direction: column;
@@ -380,8 +412,7 @@
 <body>
   <header>
     <div class="logo">
-      <img src="アクションエース　ロゴ.webp" alt="アクションエース ロゴ" style="height:54px;vertical-align:middle;margin-right:10px;">
-      アクションエース
+      <img src="1000000345.webp" alt="アクションエース ロゴ" style="height:54px;">
     </div>
     <nav>
       <a href="#top">トップ</a>
@@ -394,7 +425,7 @@
   <!-- 代表写真＆自己紹介 -->
   <section id="top">
     <div style="flex:1 1 220px;text-align:center;">
-      <img src="1.jpg" alt="代表 佐野一郎">
+      <img src="f75a8fcf-7d4a-4874-93fb-1b64b32d51b3-1_all_1445.jpg" alt="代表 佐野一郎" class="profile-photo">
       <div class="top-name">代表：佐野一郎</div>
       <div class="top-title">生成AIクリエイター／講師</div>
     </div>
@@ -415,23 +446,30 @@
   <section id="service">
     <h2>サービス内容</h2>
     <div class="service-blocks">
+
+      <!-- 電子書籍作成講座 -->
       <div class="service-block">
-        <h3 style="color:#e97e1a;">電子書籍作成講座</h3>
+        <img src="A_photograph_of_a_middle-aged_Asian_man_with_short.png" alt="電子書籍作成講座">
+        <h3>電子書籍作成講座</h3>
         <ul>
           <li>Zoomで3回受講／AIを活用した原稿作成サポート</li>
           <li>文章が苦手でも大丈夫！</li>
           <li>表紙デザイン＆Amazon Kindle公開まで伴走</li>
         </ul>
       </div>
+      <!-- ChatGPT基本講座 -->
       <div class="service-block">
-        <h3 style="color:#176cb8;">ChatGPT基本講座</h3>
+        <img src="A_photograph_of_a_young_East_Asian_woman_in_her_mi.png" alt="ChatGPT基本講座">
+        <h3>ChatGPT基本講座</h3>
         <ul>
           <li>初心者向け・「使ってみたい」を応援！</li>
           <li>AIと対話しながら、ビジネスや副業に活用するコツを解説</li>
         </ul>
       </div>
+      <!-- オリジナルAIツール作成 -->
       <div class="service-block">
-        <h3 style="color:#c553c8;">オリジナルAIツール（GPT）作成・レンタル</h3>
+        <img src="A_professional_photograph_features_a_Caucasian_man.png" alt="オリジナルAIツール作成">
+        <h3>オリジナルAIツール（GPT）作成・レンタル</h3>
         <ul>
           <li>あなた専用のAIツールを作成</li>
           <li>販売＆サブスク型レンタルも対応</li>
@@ -485,8 +523,6 @@
       <dd><a href="https://www.facebook.com/profile.php?id=61570933080787" target="_blank" rel="noopener">Facebookページ</a></dd>
       <dt>コエテコカレッジ</dt>
       <dd><a href="https://college.coeteco.jp/bundles/oPEOsA69" target="_blank" rel="noopener">コエテコカレッジ サブスクページ</a></dd>
-      <dt>ポートフォリオ</dt>
-      <dd><a href="https://action.edire.co/" target="_blank" rel="noopener">https://action.edire.co/</a></dd>
       <dt>代表</dt>
       <dd>
         佐野一郎<br>
@@ -507,7 +543,7 @@
     <h2>お問い合わせ</h2>
     <div class="contact-area">
       <div class="contact-profile">
-        <img src="1.jpg" alt="代表写真">
+        <img src="f75a8fcf-7d4a-4874-93fb-1b64b32d51b3-1_all_1445.jpg" alt="代表写真">
         <div class="contact-name">佐野一郎</div>
         <div class="contact-title">
           生成AIクリエイター／講師
