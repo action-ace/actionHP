@@ -170,6 +170,83 @@
       text-align: left;
       line-height: 1.8;
     }
+    /* 出版実績・著者ギャラリー */
+    #books {
+      max-width: 950px;
+      margin: 40px auto 0 auto;
+      padding: 42px 24px 36px;
+      background: linear-gradient(135deg, #fffaf1 0%, #fff 58%, #fff0e7 100%);
+      border-radius: 16px;
+      box-shadow: 0 2px 10px #efd8b450;
+      text-align: center;
+      overflow: hidden;
+    }
+    #books h2 {
+      margin: 0 0 10px;
+      color: #da6800;
+      letter-spacing: 2px;
+    }
+    .books-lead {
+      margin: 0 auto 26px;
+      max-width: 700px;
+      color: #555;
+      font-size: 1.06rem;
+      line-height: 1.9;
+    }
+    .books-lead strong {
+      color: #e05c24;
+      font-size: 1.28rem;
+    }
+    .book-covers {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 18px;
+      margin: 0 auto 28px;
+    }
+    .book-covers img {
+      width: 128px;
+      height: 182px;
+      object-fit: cover;
+      border-radius: 5px;
+      background: #eee;
+      box-shadow: 0 8px 18px #5b321f35;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .book-covers img:nth-child(2),
+    .book-covers img:nth-child(4) {
+      width: 142px;
+      height: 202px;
+    }
+    .book-covers img:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 13px 24px #5b321f45;
+    }
+    .gallery-button,
+    .service-gallery-button {
+      display: inline-block;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 28px;
+      background: linear-gradient(90deg, #e96c28, #f24f59);
+      box-shadow: 0 5px 14px #e66a3b45;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .gallery-button {
+      padding: 14px 32px;
+      font-size: 1.08rem;
+    }
+    .service-gallery-button {
+      margin-top: 14px;
+      padding: 10px 20px;
+      font-size: 0.96rem;
+    }
+    .gallery-button:hover,
+    .service-gallery-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px #e66a3b55;
+    }
     /* 会社情報 */
     #about {
       max-width: 900px;
@@ -402,8 +479,23 @@
         padding: 22px 6px;
         gap: 16px;
       }
-      #service, #about, #contact {
+      #service, #books, #about, #contact {
         padding: 22px 8px 18px 8px;
+      }
+      .book-covers {
+        gap: 8px;
+      }
+      .book-covers img {
+        width: 72px;
+        height: 104px;
+      }
+      .book-covers img:nth-child(2),
+      .book-covers img:nth-child(4) {
+        width: 82px;
+        height: 118px;
+      }
+      .books-lead {
+        font-size: 0.98rem;
       }
       .service-blocks {
         flex-direction: column;
@@ -439,6 +531,7 @@
     <nav>
       <a href="#top">トップ</a>
       <a href="#service">サービス</a>
+      <a href="#books">著書一覧</a>
       <a href="#about">会社情報</a>
       <a href="#contact">お問い合わせ</a>
     </nav>
@@ -477,6 +570,7 @@
           <li>文章が苦手でも大丈夫！</li>
           <li>表紙デザイン＆Amazon Kindle公開まで伴走</li>
         </ul>
+        <a class="service-gallery-button" href="#books">出版実績を見る</a>
       </div>
       <!-- ChatGPT基本講座 -->
       <div class="service-block">
@@ -539,6 +633,26 @@
         </ul>
       </div>
     </div>
+  </section>
+
+  <!-- 出版実績・著者ギャラリー -->
+  <section id="books">
+    <h2>出版実績・著書紹介</h2>
+    <p class="books-lead">
+      生成AI、電子書籍、副業、健康、物語など、幅広いテーマで<br>
+      <strong>ペンネームを含め60冊以上を出版</strong><br>
+      気になる一冊を、ジャンル別の著者ギャラリーから探せます。
+    </p>
+    <div class="book-covers" aria-label="佐野一郎の代表的な電子書籍">
+      <img src="https://sanoichiro-books.ichirosano.chatgpt.site/assets/covers/B0FLW43CPQ.jpg" alt="佐野一郎のAI関連電子書籍の表紙" loading="lazy">
+      <img src="https://sanoichiro-books.ichirosano.chatgpt.site/assets/covers/B0FMPVJWDT.jpg" alt="佐野一郎の電子書籍の表紙" loading="lazy">
+      <img src="https://sanoichiro-books.ichirosano.chatgpt.site/assets/covers/B0H2PHLJCZ.jpg" alt="佐野一郎のAI関連電子書籍の表紙" loading="lazy">
+      <img src="https://sanoichiro-books.ichirosano.chatgpt.site/assets/covers/B0G1GMHT13.jpg" alt="佐野一郎の電子書籍の表紙" loading="lazy">
+      <img src="https://sanoichiro-books.ichirosano.chatgpt.site/assets/covers/B0G5DVWGTM.jpg" alt="佐野一郎のAI関連電子書籍の表紙" loading="lazy">
+    </div>
+    <a class="gallery-button" href="https://sanoichiro-books.ichirosano.chatgpt.site" target="_blank" rel="noopener noreferrer">
+      著者ギャラリーで全作品を見る
+    </a>
   </section>
 
   <!-- 会社情報 -->
